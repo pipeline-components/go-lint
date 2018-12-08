@@ -1,6 +1,7 @@
 FROM golang:1.11.2-alpine3.8 as builder
 
 WORKDIR /go/src/
+# hadolint ignore=DL3018
 RUN apk add --no-cache git 
 RUN go get -v -u golang.org/x/lint/golint
 
