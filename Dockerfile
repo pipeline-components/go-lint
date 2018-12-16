@@ -1,4 +1,4 @@
-FROM golang:1.11.2-alpine3.8 as builder
+FROM golang:1.11.2-alpine3.8 as build
 
 WORKDIR /go/src/
 # hadolint ignore=DL3018
@@ -8,7 +8,7 @@ RUN go get -v -u golang.org/x/lint/golint
 FROM alpine:3.8
 
 # Generic
-COPY --from=builder /go/bin/golint /usr/local/bin
+COPY --from=build /go/bin/golint /usr/local/bin
 
 # Build arguments
 ARG BUILD_DATE
