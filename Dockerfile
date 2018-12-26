@@ -10,6 +10,7 @@ FROM alpine:3.8
 # Generic
 COPY --from=build /go/bin/golint /usr/local/bin
 
+WORKDIR /code/
 # Build arguments
 ARG BUILD_DATE
 ARG BUILD_REF
