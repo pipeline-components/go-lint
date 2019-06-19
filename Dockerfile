@@ -5,7 +5,7 @@ WORKDIR /go/src/
 RUN apk add --no-cache git 
 RUN go get -v -u golang.org/x/lint/golint
 
-FROM alpine:3.9.4
+FROM alpine:3.10.0
 
 # Generic
 COPY --from=build /go/bin/golint /usr/local/bin
