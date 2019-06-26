@@ -1,11 +1,11 @@
-FROM golang:1.11.11-alpine3.8 as build
+FROM golang:1.11.11-alpine3.10 as build
 
 WORKDIR /go/src/
 # hadolint ignore=DL3018
 RUN apk add --no-cache git 
 RUN go get -v -u golang.org/x/lint/golint
 
-FROM alpine:3.9.4
+FROM alpine:3.10.0
 
 # Generic
 COPY --from=build /go/bin/golint /usr/local/bin
