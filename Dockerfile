@@ -2,10 +2,15 @@ FROM golang:1.13.1-alpine3.10 as build
 
 WORKDIR /go/src/
 # hadolint ignore=DL3018
-RUN apk add --no-cache git 
+RUN apk add --no-cache git
 RUN go get -v -u golang.org/x/lint/golint
 
+FROM pipelinecomponents/base-entrypoint:0.1.0 as entrypoint
+
 FROM alpine:3.10.2
+COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+ENV DEFAULTCMD go-lint
 
 # Generic
 COPY --from=build /go/bin/golint /usr/local/bin
