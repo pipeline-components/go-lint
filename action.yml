@@ -13,7 +13,7 @@ inputs:
   options:
     description: 'Additional options'
     required: false
-    default: '-v'
+    default: '--set_exit_status'
 runs:
   using: 'docker'
   image: docker://pipelinecomponents/go-lint
