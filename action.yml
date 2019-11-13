@@ -18,6 +18,6 @@ runs:
   using: 'docker'
   image: docker://pipelinecomponents/go-lint
   args:
-    - go-lint
+    - golint
     - '${{ inputs.options }}'
     - '${{ inputs.directory }}'
