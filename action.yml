@@ -1,5 +1,5 @@
 ---
-name: 'go-lint'
+name: 'pipeline-components-go-lint'
 description: 'go-lint by Pipeline Components'
 author: 'Robbert Müller <spam.me@grols.ch>'
 branding:
