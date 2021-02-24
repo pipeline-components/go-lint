@@ -5,7 +5,7 @@ WORKDIR /go/src/
 RUN apk add --no-cache git
 RUN go get -v -u golang.org/x/lint/golint
 
-FROM pipelinecomponents/base-entrypoint:0.3.0 as entrypoint
+FROM pipelinecomponents/base-entrypoint:0.4.0 as entrypoint
 
 FROM alpine:3.13.1
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
