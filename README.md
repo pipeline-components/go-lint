@@ -21,7 +21,7 @@ The image is for running go-lint. The image is based on alpine:3.8
 ```yaml
 go-lint:
   stage: linting
-  image: pipelinecomponents/go-lint:latest
+  image: registry.gitlab.com/pipeline-components/go-lint:latest
   script:
     - go-lint -v ./...
 ```
