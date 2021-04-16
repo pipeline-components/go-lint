@@ -7,7 +7,7 @@ RUN go get -v -u golang.org/x/lint/golint
 
 FROM pipelinecomponents/base-entrypoint:0.4.0 as entrypoint
 
-FROM alpine:3.13.4
+FROM alpine:3.13.5
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD go-lint
