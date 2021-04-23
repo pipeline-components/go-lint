@@ -23,7 +23,7 @@ go-lint:
   stage: linting
   image: registry.gitlab.com/pipeline-components/go-lint:latest
   script:
-    - go-lint ./...
+    - golint ./...
 ```
 
 ## Versioning
