@@ -10,7 +10,7 @@ FROM pipelinecomponents/base-entrypoint:0.4.0 as entrypoint
 FROM alpine:3.13.5
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-ENV DEFAULTCMD go-lint
+ENV DEFAULTCMD golint
 
 # Generic
 COPY --from=build /go/bin/golint /usr/local/bin
