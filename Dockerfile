@@ -2,8 +2,8 @@ FROM golang:1.13.11-alpine3.10 as build
 
 WORKDIR /go/src/
 # hadolint ignore=DL3018
-RUN apk add --no-cache git
-RUN go get -v -u golang.org/x/lint/golint
+RUN apk add --no-cache git && \
+    go get -v -u golang.org/x/lint/golint
 
 FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 
