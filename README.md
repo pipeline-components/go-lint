@@ -10,6 +10,10 @@
 
 [![Docker Pulls][pulls-shield]][dockerhub]
 
+# status
+Go-lint is no longer maintained, and also no longer compilable, and thus we cannot provide this project anymore.
+The project will be archived and in time the container will be no longer available due to cleanups on duckerhub and gitlab
+
 ## Usage
 
 The image is for running go-lint. The image is based on alpine:3.10.
