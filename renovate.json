@@ -1,5 +1,6 @@
 {
   "extends": [
     "gitlab>pipeline-components/org/config"
-  ]
+  ],
+  "enabled": false
 }
