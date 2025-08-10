@@ -17,7 +17,7 @@ The project will be archived and in time the container will be no longer availab
 
 ## Usage
 
-The image is for running go-lint. The image is based on alpine:3.10.
+The image is for running go-lint.
 
 ## Examples
 
